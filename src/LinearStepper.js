@@ -52,7 +52,7 @@ const BasicForm = () => {
         )}
       />
 
-      <Controller
+<Controller
         control={control}
         name="lastName"
         render={({ field }) => (
@@ -67,16 +67,46 @@ const BasicForm = () => {
           />
         )}
       />
+ <Controller
+        control={control}
+        name="emailAddress"
+        render={({ field }) => (
+          <TextField
+            id="email"
+            label="E-mail"
+            variant="outlined"
+            placeholder="Enter Your E-mail Address"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
 
       <Controller
         control={control}
-        name="nickName"
+        name="phoneNumber"
         render={({ field }) => (
           <TextField
-            id="nick-name"
-            label="Nick Name"
+            id="phone-number"
+            label="Phone Number"
             variant="outlined"
-            placeholder="Enter Your Nick Name"
+            placeholder="Enter Your Phone Number"
+            fullWidth
+            margin="normal"
+            {...field}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="alternatePhone"
+        render={({ field }) => (
+          <TextField
+            id="alternate-phone"
+            label="Alternate Phone"
+            variant="outlined"
+            placeholder="Enter Your Alternate Phone"
             fullWidth
             margin="normal"
             {...field}
@@ -86,6 +116,7 @@ const BasicForm = () => {
     </>
   );
 };
+  
 const ContactForm = () => {
   const { control } = useFormContext();
   return (
