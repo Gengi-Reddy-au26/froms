@@ -395,18 +395,27 @@ const LinaerStepper = () => {
                 disabled={activeStep === 0}
                 onClick={handleBack}
               >
-                back
+                I have read and accept the Expedia Terms of Use and Expedia Privacy Policy.
+               
               </Button>
-              {isStepOptional(activeStep) && (
-                <Button
-                  className={classes.button}
-                  variant="contained"
-                  color="primary"
-                  onClick={handleSkip}
-                >
-                  skip
-                </Button>
-              )}
+              <Button
+                className={classes.button}
+                disabled={activeStep === 0}
+                onClick={handleBack}
+              >
+               Back
+               
+              </Button>
+
+                 <Button
+                 className={classes.button}
+                 variant="contained"
+                 color="primary"
+                 onClick={handleSkip}
+               >
+                 skip
+               </Button>
+            
               <Button
                 className={classes.button}
                 variant="contained"
